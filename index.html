@@ -1,44 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sidhi’s Alphabet Learning App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="app" role="application">
     <header>
-      <div>
-        <h1>Sidhi’s Alphabet Learning App</h1>
-        <p class="lead">Made with love for little Sidhi ❤️ — Tap letters to learn, see pictures, and play a fun quiz!</p>
-      </div>
-      <div class="controls">
-        <button id="speakAll">🔊 Speak All</button>
-        <button class="secondary" id="shuffle">🔀 Shuffle</button>
-        <button id="startQuiz">🎯 Start Quiz</button>
-      </div>
+      <h1>🌸 Sidhi’s Alphabet Learning App</h1>
+      <p class="lead">Tap letters to learn, hear sounds, and play a fun quiz — made with love for baby Sidhi 💕</p>
     </header>
 
-    <div class="container">
-      <div>
-        <div class="grid" id="lettersGrid" aria-label="Alphabet letters"></div>
-      </div>
+    <div class="controls">
+      <button id="speakAll">🔊 Speak All</button>
+      <button id="shuffle" class="secondary">🔀 Shuffle</button>
+      <button id="startQuiz">🎯 Start Quiz</button>
+    </div>
 
-      <aside class="preview" aria-live="polite">
+    <div class="container">
+      <div class="grid" id="lettersGrid"></div>
+
+      <aside class="preview">
         <div class="preview-main">
           <div class="big-emoji" id="previewEmoji">🍎</div>
           <div>
             <div class="big-letter" id="previewLetter">A</div>
             <div class="preview-word" id="previewWord">Apple</div>
-            <div class="word" id="previewHint">Hi Sidhi! Tap any letter to begin 💕</div>
+            <div class="hint" id="previewHint">Hi Sidhi! Tap any letter to begin 💖</div>
           </div>
         </div>
 
         <div class="actions">
           <button id="playSound">▶️ Say it</button>
-          <button class="secondary" id="prev">⬅️ Prev</button>
-          <button class="secondary" id="next">➡️ Next</button>
+          <button id="prev" class="secondary">⬅️ Prev</button>
+          <button id="next" class="secondary">➡️ Next</button>
         </div>
 
         <div class="quiz-area" id="quizArea"></div>
@@ -46,8 +43,7 @@
     </div>
 
     <footer>
-      <div>Specially made for Sidhi — 2-year-old little learner 🌸</div>
-      <div>Tip: Keep volume ON to hear the words!</div>
+      <p>Specially made for little Sidhi — 2-year-old learner 🌼 | Keep sound ON 🔊</p>
     </footer>
   </div>
 
