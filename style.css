@@ -1,0 +1,185 @@
+:root {
+  --bg: #fff8f9;
+  --card: #ffffff;
+  --accent: #f06292; /* soft pink */
+  --muted: #7c7c7c;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Comic Sans MS', 'Poppins', system-ui, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #ffe6f0 0%, var(--bg) 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.app {
+  width: 100%;
+  max-width: 980px;
+  background: var(--card);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(255, 105, 180, 0.15);
+  padding: 18px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 0;
+  color: #d81b60;
+}
+
+p.lead {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button.secondary {
+  background: #fff0f4;
+  color: #d81b60;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+/* Letter grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.card {
+  background: linear-gradient(180deg, #fff, #fff5f8);
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  border: 2px solid #ffe4ec;
+  box-shadow: 0 4px 8px rgba(255, 182, 193, 0.2);
+  transition: transform .15s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.letter { font-size: 30px; font-weight: 800; color: var(--accent); }
+.emoji { font-size: 36px; margin-top: 6px; }
+.word { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+/* Preview */
+.preview {
+  background: #fff5f8;
+  border-radius: 14px;
+  padding: 14px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.preview-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.big-emoji { font-size: 72px; }
+.big-letter { font-size: 68px; font-weight: 800; color: var(--accent); }
+.preview-word { font-size: 20px; font-weight: 700; }
+
+.actions { display: flex; gap: 8px; margin-top: 8px; }
+
+/* Quiz section */
+.quiz-area { margin-top: 10px; }
+.quiz-card {
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.25);
+}
+
+.options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.option {
+  min-width: 80px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 2px dashed #ffc1cc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.option.correct {
+  border-color: green;
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.option.wrong {
+  border-color: red;
+  background: rgba(255, 99, 71, 0.06);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .container { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: repeat(4, 1fr); }
+  .big-emoji { font-size: 56px; }
+  .big-letter { font-size: 48px; }
+}
